@@ -1,0 +1,57 @@
+#N canvas 514 227 631 447 10;
+#X obj 449 112 gemhead 20;
+#X obj 404 176 pix_mask;
+#X obj 404 207 alpha;
+#X obj 404 240 pix_texture;
+#X obj 28 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 32 78 gemwin;
+#X msg 56 19 create \, 1;
+#X msg 56 46 destroy \, 0;
+#X obj 382 128 pix_invert;
+#X obj 412 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 404 50 gemhead 4;
+#X obj 189 238 pix_mask;
+#X obj 189 269 alpha;
+#X obj 189 302 pix_texture;
+#X obj 189 128 pix_invert;
+#X obj 273 113 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 437 303 4;
+#X obj 189 22 gemhead 4;
+#X obj 404 329 square;
+#X obj 187 350 cube 15;
+#X obj 189 183 pix_contrast;
+#X obj 278 214 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 306 216 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 276 363 5 0 0 0 - - -;
+#X obj 402 83 pix_image grfx/sscape09a_pd.jpg;
+#X obj 448 142 pix_image grfx/fg3_pd.jpg;
+#X obj 190 65 pix_image grfx/helpGhost_pd.jpg;
+#X connect 0 0 25 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 18 0;
+#X connect 4 0 5 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 1 0;
+#X connect 9 0 8 0;
+#X connect 10 0 24 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 19 0;
+#X connect 14 0 20 0;
+#X connect 15 0 14 0;
+#X connect 16 0 18 1;
+#X connect 17 0 26 0;
+#X connect 20 0 11 0;
+#X connect 21 0 20 1;
+#X connect 21 0 23 0;
+#X connect 22 0 20 2;
+#X connect 24 0 8 0;
+#X connect 25 0 1 1;
+#X connect 26 0 14 0;
