@@ -1,0 +1,102 @@
+#N canvas 346 106 1009 505 10;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array bdR 35048 float 2;
+#X coords 0 1 35048 -1 160 100 1 0 0;
+#X restore 676 316 graph;
+#X msg 32 -8 read -resize C:/Joseph/Lowriders/ModernKits/Kicks/Kick16.wav
+bdR;
+#X msg 357 -9 read -resize C:/Joseph/Lowriders/ModernKits/Kicks/Kick01.wav
+bdR;
+#X msg 682 -11 read -resize C:/Joseph/Lowriders/ModernKits/Kicks/Kick10.wav
+bdR;
+#X obj 33 81 soundfiler;
+#X floatatom 32 221 5 0 0 0 - - -;
+#X obj 33 312 +~;
+#X floatatom 33 106 5 0 0 0 - - -;
+#X obj 33 136 expr 44100 / $f1;
+#X obj 33 178 phasor~;
+#X obj 32 251 square~;
+#X obj 33 342 delay~ 100;
+#X obj 33 278 *~ 356;
+#X floatatom 163 170 5 0 0 0 - - -;
+#X obj 117 295 hip~;
+#X obj 154 278 +;
+#X obj 35 377 tabread4~ bdR;
+#X obj 683 100 metro;
+#X obj 683 76 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 683 132 f;
+#X obj 733 134 + 1;
+#X obj 683 166 % 8;
+#X obj 683 198 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 683 229 sel 0 1 2 3 4 5 6 7 8;
+#X msg 165 136 0;
+#X obj 458 246 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 561 262 5 0 0 0 - - -;
+#X obj 531 260 +;
+#X msg 500 260 50;
+#X obj 413 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 546 84 5 0 0 0 - - -;
+#X msg 46 29 read -resize C:/Joseph/Lowriders/ModernKits/Kicks/Kick06.wav
+bdR;
+#X msg 371 28 read -resize C:/Joseph/Lowriders/ModernKits/Kicks/Kick19.wav
+bdR;
+#X msg 696 26 read -resize C:/Joseph/Lowriders/ModernKits/Kicks/Kick20.wav
+bdR;
+#X obj 163 214 square~;
+#X floatatom 189 295 5 0 0 0 - - -;
+#X floatatom 170 344 5 0 0 0 - - -;
+#X obj 118 231 *~;
+#X obj 35 423 s~ Bds;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 10 0;
+#X connect 5 0 13 0;
+#X connect 5 0 15 0;
+#X connect 5 0 30 0;
+#X connect 6 0 11 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 37 0;
+#X connect 10 0 12 0;
+#X connect 11 0 16 0;
+#X connect 12 0 6 0;
+#X connect 13 0 34 0;
+#X connect 13 0 9 1;
+#X connect 14 0 6 1;
+#X connect 15 0 14 1;
+#X connect 15 0 35 0;
+#X connect 16 0 38 0;
+#X connect 17 0 19 0;
+#X connect 18 0 17 0;
+#X connect 19 0 20 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 1;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 25 0;
+#X connect 23 1 1 0;
+#X connect 23 2 31 0;
+#X connect 23 4 2 0;
+#X connect 23 5 32 0;
+#X connect 23 6 33 0;
+#X connect 23 7 3 0;
+#X connect 24 0 5 0;
+#X connect 25 0 28 0;
+#X connect 25 0 29 0;
+#X connect 26 0 15 1;
+#X connect 26 0 12 1;
+#X connect 27 0 26 0;
+#X connect 28 0 27 0;
+#X connect 30 0 17 1;
+#X connect 30 0 27 1;
+#X connect 31 0 4 0;
+#X connect 32 0 4 0;
+#X connect 33 0 4 0;
+#X connect 34 0 37 1;
+#X connect 37 0 14 0;
