@@ -1,0 +1,56 @@
+#N canvas 165 130 406 346 10;
+#X obj 246 289 print i;
+#X obj 122 157 metro 100;
+#X obj 122 178 f;
+#X obj 149 178 + 1;
+#X obj 122 120 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 177 214 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 198 214 random 2;
+#X msg 244 255 0;
+#X obj 198 272 list;
+#X obj 198 302 t a b;
+#X obj 177 177 % 20;
+#X obj 74 240 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 136 223 sel 0;
+#X floatatom 101 222 5 0 0 0 - - -;
+#X obj 116 80 f;
+#X obj 153 81 + 1;
+#X obj 154 103 t b a;
+#X floatatom 224 103 5 0 0 0 - - -;
+#X obj 133 54 metro 100;
+#X obj 133 29 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 221 161 5 0 0 0 - - -;
+#X text 196 197 Give me a 0 or 1;
+#X text 131 12 My iterative list counter inf lvl depth;
+#X text 132 137 My iterative list counter 1 lvl depth;
+#X text 113 322 This "tab" (trigger) grows the list;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 2 1;
+#X connect 3 0 10 0;
+#X connect 4 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 7 0 8 0;
+#X connect 7 0 8 1;
+#X connect 8 0 0 0;
+#X connect 8 0 9 0;
+#X connect 9 0 8 1;
+#X connect 10 0 5 0;
+#X connect 10 0 12 0;
+#X connect 10 0 13 0;
+#X connect 11 0 4 0;
+#X connect 11 0 7 0;
+#X connect 12 0 11 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 4 0;
+#X connect 16 1 17 0;
+#X connect 17 0 14 1;
+#X connect 18 0 14 0;
+#X connect 19 0 18 0;
+#X connect 20 0 10 1;
