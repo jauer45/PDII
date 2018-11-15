@@ -1,0 +1,6 @@
+#N canvas 0 0 300 230 10;
+#X obj 24 60 partial 0.3 0.3 0.3 0.3;
+#X obj 25 83 partial 0.4 0.4 0.4 0.4;
+#X obj 24 106 partial 0.5 0.5 0.5 0.5;
+#X obj 24 39 partial 0.2 0.2 0.2 0.2;
+#X obj 24 129 partial 0.6 0.6 0.6 0.6;

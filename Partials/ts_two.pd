@@ -1,0 +1,22 @@
+#N canvas 548 162 538 352 10;
+#X declare -lib timestretch;
+#X obj 58 268 dac~ 1 2;
+#X obj 117 213 recrd;
+#X obj 118 182 spats~;
+#X obj -5 211 spats~;
+#X obj 57 153 *~;
+#X obj 56 58 ts_abs;
+#X msg -17 22 \; pd dsp 1;
+#X msg -18 60 \; pd dsp 0;
+#X obj 75 125 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 7500 1;
+#X connect 1 0 0 0;
+#X connect 1 1 0 1;
+#X connect 2 0 1 0;
+#X connect 2 1 1 1;
+#X connect 3 0 0 0;
+#X connect 3 1 0 1;
+#X connect 4 0 3 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 8 0 4 1;

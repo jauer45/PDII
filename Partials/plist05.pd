@@ -1,0 +1,6 @@
+#N canvas 505 304 418 257 10;
+#X obj 44 29 partial05 0.5 0.5 0.5 0.5;
+#X obj 43 53 partial05 0.6 0.6 0.6 0.6;
+#X obj 42 76 partial05 0.7 0.7 0.7 0.7;
+#X obj 42 100 partial05 0.8 0.8 0.8 0.8;
+#X obj 43 122 partial05 0.9 0.9 0.9 0.9;

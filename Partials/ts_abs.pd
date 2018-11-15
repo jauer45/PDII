@@ -1,0 +1,52 @@
+#N canvas 653 142 402 324 10;
+#X declare -lib timestretch;
+#X obj 13 170 soundfiler;
+#X msg 49 92 symbol C:/;
+#X msg 13 70 bang;
+#X obj 13 119 openpanel;
+#X msg 49 69 symbol /Joseph/Audio;
+#X obj 36 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 18 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 12 237 print;
+#X obj 12 217 import timestretch;
+#X obj 12 195 loadbang;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array sndfl 1.97859e+007 float 2;
+#X coords 0 1 1.97859e+007 -1 194 140 1 0 0;
+#X restore 162 155 graph;
+#X msg 230 72 4096;
+#X msg 191 71 8192;
+#X floatatom 182 100 5 0 0 0 - - -;
+#X floatatom 238 106 5 0 0 0 - - -;
+#X obj 114 37 hsl 128 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 16 23 File;
+#X text 58 23 Slice;
+#X text 110 21 Speed;
+#X obj 63 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 81 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 305 122 outlet~;
+#X msg 14 145 read -resize \$1 sndfl;
+#X obj 182 122 timestretch~ sndfl;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 22 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 0;
+#X connect 8 0 7 0;
+#X connect 9 0 8 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
+#X connect 13 0 23 0;
+#X connect 14 0 23 1;
+#X connect 15 0 14 0;
+#X connect 19 0 12 0;
+#X connect 20 0 11 0;
+#X connect 22 0 0 0;
+#X connect 23 0 21 0;
+#X coords 0 -1 1 1 240 60 1 10 4;
