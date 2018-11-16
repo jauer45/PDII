@@ -1,0 +1,29 @@
+#N canvas 228 200 312 194 10;
+#X obj 90 107 expr 60000 / $f1;
+#X obj 63 136 metro;
+#X floatatom 82 52 5 0 0 0 - - -;
+#X obj 127 8 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 17 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 40 30 hsl 100 10 60 540 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9800 1;
+#X floatatom 37 52 5 0 0 0 - - -;
+#X obj 18 160 outlet bngtime;
+#X obj 111 160 outlet bpm;
+#X obj 179 160 outlet clock;
+#X text 13 27 BPM;
+#X text 79 37 CTime;
+#X text 87 3 ON/OFF;
+#X obj 161 7 inlet;
+#X connect 0 0 1 1;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 2 0 9 0;
+#X connect 3 0 1 0;
+#X connect 4 0 7 0;
+#X connect 5 0 0 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 13 0 3 0;
+#X coords 0 -1 1 1 140 70 1 5 5;

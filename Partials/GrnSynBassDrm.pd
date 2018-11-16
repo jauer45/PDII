@@ -1,4 +1,4 @@
-#N canvas 200 94 1077 505 10;
+#N canvas 91 306 1077 505 10;
 #N canvas 0 0 450 300 (subpatch) 0;
 #X array bdR 10278 float 2;
 #X coords 0 1 10278 -1 160 100 1 0 0;
@@ -33,12 +33,12 @@
 #X obj 151 265 square~;
 #X floatatom 177 347 5 0 0 0 - - -;
 #X obj 106 282 *~;
-#X obj 647 121 inlet;
+#X obj 672 117 inlet;
 #X obj 22 463 outlet~;
 #X obj 153 142 inlet;
 #X obj 199 186 inlet;
 #X floatatom 230 235 5 0 0 0 - - -;
-#X obj 529 134 inlet;
+#X obj 534 105 inlet;
 #X msg 21 19 read -resize C:/Joseph/Lowriders/EmuSP12/BASSDRUM/Bassdrum-01.wav
 bdR;
 #X msg 373 19 read -resize C:/Joseph/Lowriders/EmuSP12/BASSDRUM/Bassdrum-02.wav
