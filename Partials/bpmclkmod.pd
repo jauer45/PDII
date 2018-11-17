@@ -6,8 +6,8 @@
 ;
 #X obj 17 53 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 40 30 hsl 100 10 60 540 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 9800 1;
+#X obj 40 30 hsl 100 10 60 1000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9900 1;
 #X floatatom 37 52 5 0 0 0 - - -;
 #X obj 18 160 outlet bngtime;
 #X obj 111 160 outlet bpm;
