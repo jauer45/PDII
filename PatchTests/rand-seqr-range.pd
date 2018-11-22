@@ -1,0 +1,33 @@
+#N canvas 675 305 450 300 10;
+#X obj 18 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 46 36 knob 32 32 60 500 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 2100 1;
+#X obj 18 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 205 71 metro;
+#X floatatom 53 113 5 0 0 0 - - -;
+#X floatatom 54 77 5 0 0 0 - - -;
+#X floatatom 18 113 5 0 0 0 - - -;
+#X text 15 19 Set Counter;
+#X obj 19 171 outlet;
+#X obj 63 170 outlet;
+#X text 16 97 Range Output;
+#X floatatom 273 131 5 0 0 0 - - -;
+#X msg 289 65 0;
+#X obj 205 106 random \$1;
+#X obj 205 131 moses \$2;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 1 0 5 0;
+#X connect 2 0 13 0;
+#X connect 3 0 2 0;
+#X connect 4 0 9 0;
+#X connect 6 0 8 0;
+#X connect 12 0 13 1;
+#X connect 12 0 14 1;
+#X connect 13 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 6 0;
+#X connect 14 1 4 0;
+#X coords 0 -1 1 1 85 160 1 10 5;
