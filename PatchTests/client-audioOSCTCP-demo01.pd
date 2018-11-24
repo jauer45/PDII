@@ -1,0 +1,14 @@
+#N canvas 523 309 450 300 10;
+#X declare -lib mrpeach;
+#X declare -lib mrpeach;
+#X text 23 7 Using TCP/IP connxtn demo for client(net)-(audio)server
+information handling and audio output.;
+#X obj 9 59 wvshpr_cbyv-loop-range-audioOSC02;
+#X text 7 42 Audio (Server);
+#X obj 231 59 wvshpr_cbyv-loop-range-clientOSC02;
+#X text 229 42 Client (Net-send);
+#X msg 10 260 \; pd dsp 1;
+#X msg 80 259 \; pd dsp 0;
+#X obj 168 250 dac~ 1 2;
+#X connect 1 0 7 0;
+#X connect 1 0 7 1;
