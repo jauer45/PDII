@@ -1,0 +1,108 @@
+#N canvas 0 0 534 428 10;
+#X declare -lib mrpeach;
+#X msg 247 263 disconnect;
+#X floatatom 365 150 5 0 0 0 - - -;
+#X obj 15 140 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 70 155 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 244 58 timetagoffset -1;
+#X msg 267 80 bufsize 100;
+#X msg 285 102 typetags \$1;
+#X obj 212 11 import mrpeach;
+#X obj 327 127 packOSC;
+#X obj 230 130 packOSCstream;
+#X obj 41 48 knob 32 32 50 500 0 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj 15 47 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 120 83 metro;
+#X obj 15 68 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 120 134 moses 160;
+#X floatatom 16 110 5 0 0 0 - - -;
+#X text 12 32 Set Counter;
+#X text 14 94 Counter Out;
+#X obj 120 110 counter 50 500;
+#X text 39 81 50-500;
+#X floatatom 305 153 5 0 0 0 - - -;
+#X obj 120 170 t f b;
+#X text 85 260 comment;
+#X obj 230 286 tcpsend;
+#X text 202 36 comment;
+#X obj 147 301 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 10 241 moses 1;
+#X msg 9 265 /Start 220 100 50 128 140 15 \$1;
+#X obj 10 300 print i;
+#X obj 32 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 33 155 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 52 155 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 14 167 TCPnet Conn;
+#X obj 70 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 16 184 CN;
+#X text 49 184 DCN;
+#X text 13 124 On(1) = conn;
+#X msg 212 32 send /Start 220 100 50 128 140 25 \$1;
+#X text 336 233 (3334);
+#X floatatom 434 310 5 0 0 0 - - -;
+#X obj 396 287 packOSC;
+#X text 432 266 UDP;
+#X obj 447 286 udpsend;
+#X text 9 340 This is a test used with Node.js osc-web (../NodeJS/osc-web/bridge.js).
+It is said to broadcast out on port 3333 (localhost -> 127.0.0.1:3333).
+In this first test we used(d) TCP socketstream. If this does not work
+(or even if it does... we then test with UDP non-streaming. NOTE: bridge.js
+assigns port 8081 as listen port (may need to query this conn.;
+#X msg 163 183 3333;
+#X msg 200 184 8081;
+#X msg 206 230 connect 127.0.0.1 \$1;
+#X obj 22 215 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 49 215 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 16 198 3333;
+#X text 48 198 8081;
+#X msg 214 207 connect 0.0.0.0 \$1;
+#X obj 67 215 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X connect 0 0 23 0;
+#X connect 3 0 6 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 0;
+#X connect 6 0 9 0;
+#X connect 8 1 1 0;
+#X connect 9 0 23 0;
+#X connect 9 1 20 0;
+#X connect 10 0 12 1;
+#X connect 11 0 12 0;
+#X connect 12 0 18 0;
+#X connect 13 0 18 1;
+#X connect 14 0 15 0;
+#X connect 14 0 21 0;
+#X connect 14 1 13 0;
+#X connect 18 0 14 0;
+#X connect 21 0 26 0;
+#X connect 21 1 25 0;
+#X connect 23 0 2 0;
+#X connect 26 1 27 0;
+#X connect 26 1 37 0;
+#X connect 27 0 28 0;
+#X connect 29 0 46 0;
+#X connect 30 0 5 0;
+#X connect 31 0 4 0;
+#X connect 33 0 0 0;
+#X connect 37 0 9 0;
+#X connect 40 1 39 0;
+#X connect 44 0 46 0;
+#X connect 45 0 46 0;
+#X connect 46 0 23 0;
+#X connect 47 0 44 0;
+#X connect 48 0 45 0;
+#X connect 51 0 23 0;
+#X connect 52 0 51 0;
+#X coords 0 -1 1 1 80 224 1 10 10;
