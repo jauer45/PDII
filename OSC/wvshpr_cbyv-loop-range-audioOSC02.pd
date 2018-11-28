@@ -1,0 +1,104 @@
+#N canvas 145 21 484 416 10;
+#X declare -lib mrpeach;
+#X obj 322 135 unpack 0 0 0 0 0;
+#X floatatom 402 55 5 0 0 0 - - -;
+#X floatatom 322 166 5 0 0 0 - - -;
+#X floatatom 345 190 5 0 0 0 - - -;
+#X floatatom 368 166 5 0 0 0 - - -;
+#X floatatom 391 190 5 0 0 0 - - -;
+#X floatatom 415 165 5 0 0 0 - - -;
+#X obj 334 112 print unpacked;
+#X obj 201 14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 286 217 verbosity \$1;
+#X obj 21 261 *~;
+#X obj 68 260 line~;
+#X obj 20 335 tabread~ Cbyv-tab;
+#X obj 19 388 env~;
+#X obj 22 206 osc~;
+#X obj 68 207 /;
+#X floatatom 16 173 5 0 0 0 - - -;
+#X obj 189 241 print delayed;
+#X obj 21 291 *~ *;
+#X obj 21 312 +~ *;
+#X floatatom 118 369 5 0 0 0 - - -;
+#X floatatom 225 317 5 0 0 0 - - -;
+#X floatatom 129 348 5 0 0 0 - - -;
+#X floatatom 146 327 5 0 0 0 - - -;
+#X floatatom 180 315 5 0 0 0 - - -;
+#X floatatom 191 343 5 0 0 0 - - -;
+#X obj 256 7 import mrpeach;
+#X obj 256 112 pipelist;
+#X obj 277 256 routeOSC /Start /200;
+#X obj 68 232 pack 0 0;
+#X obj 55 389 outlet~;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array Cbyv-tab 100 float 1;
+#A 0 0.531159 0.531159 0.516873 0.495445 0.474016 0.445445 0.431159
+0.416874 0.388302 -0.811691 -0.797405 -0.78312 -0.768834 -0.754548
+-0.754548 -0.740263 -0.740263 -0.740263 -0.740263 -0.740263 -0.740263
+-0.754548 -0.754548 -0.768834 -0.78312 -0.78312 -0.78312 -0.797405
+-0.811691 -0.825977 -0.825977 -0.825977 -0.854548 -0.854548 -0.868833
+-0.868833 -0.883119 -0.883119 -0.897405 -0.897405 -0.91169 -0.91169
+-0.91169 -0.925976 -0.925976 -0.925976 -0.925976 -0.925976 -0.925976
+-0.925976 -0.925976 -0.925976 -0.925976 -0.925976 -0.91169 -0.897405
+-0.890262 -0.883119 -0.868833 -0.854548 -0.840262 -0.794548 -0.788834
+-0.78312 -0.780739 -0.778358 -0.775977 -0.773596 -0.771215 -0.768834
+-0.768834 -0.768834 -0.768834 -0.768834 -0.768834 -0.768834 -0.768834
+-0.768834 -0.768834 -0.768834 -0.768834 -0.768834 -0.740263 -0.840262
+-0.840262 -0.840262 -0.840262 -0.840262 -0.840262 -0.840262 -0.840262
+-0.840262 -0.840262 -0.840262 -0.825977 -0.825977 -0.825977 -0.825977
+-0.825977 -0.825977;
+#X coords 0 1 99 -1 200 140 1;
+#X restore 16 31 graph;
+#X text 109 169 RMS amplitude (db);
+#X text 72 13 Draw Waveform;
+#X text 154 13 Netview;
+#X obj 255 38 tcpreceive 9999;
+#X obj 256 65 unpackOSCstream;
+#X text 48 174 ENvelope;
+#X obj 118 273 unpack f f f f f f f;
+#X floatatom 233 297 5 0 0 0 - - -;
+#X obj 19 359 hip~ 15;
+#X connect 0 0 2 0;
+#X connect 0 1 3 0;
+#X connect 0 2 4 0;
+#X connect 0 3 5 0;
+#X connect 0 4 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 28 0;
+#X connect 10 0 18 0;
+#X connect 11 0 10 1;
+#X connect 12 0 40 0;
+#X connect 13 0 16 0;
+#X connect 14 0 10 0;
+#X connect 15 0 29 0;
+#X connect 18 0 19 0;
+#X connect 19 0 12 0;
+#X connect 27 0 17 0;
+#X connect 27 0 28 0;
+#X connect 28 0 38 0;
+#X connect 29 0 11 0;
+#X connect 35 0 36 0;
+#X connect 35 1 0 0;
+#X connect 35 2 1 0;
+#X connect 36 0 27 0;
+#X connect 36 0 7 0;
+#X connect 36 1 27 1;
+#X connect 38 0 20 0;
+#X connect 38 0 14 0;
+#X connect 38 1 15 1;
+#X connect 38 1 22 0;
+#X connect 38 2 23 0;
+#X connect 38 2 29 1;
+#X connect 38 3 18 1;
+#X connect 38 3 24 0;
+#X connect 38 4 19 1;
+#X connect 38 4 25 0;
+#X connect 38 5 21 0;
+#X connect 38 5 40 1;
+#X connect 38 6 39 0;
+#X connect 38 6 15 0;
+#X connect 40 0 13 0;
+#X connect 40 0 30 0;
+#X coords 0 -1 1 1 210 190 1 10 2;

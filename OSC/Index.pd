@@ -1,0 +1,29 @@
+#N canvas 601 74 578 521 10;
+#X text 22 84 This is the OSC testing/prototype package(patch "area"/namespace).
+The idea is to test & verify if I can get pure-data OSC to talk to
+various other implementations of OSC within other languages such as
+: go \, node.js/javascript \, Haskell \, Erlang and Processing/Arduino
+hal C lang.;
+#X text 25 172 The current situation (using localhost/0.0.0.0/127.0.0.1):
+;
+#X text 73 380 2) go - NA;
+#X text 72 412 3) Haskell - NA;
+#X text 72 441 4) Erlang - NA;
+#X text 72 470 5) Processing (hal C lang) - NA;
+#X msg 137 13 control (DATA);
+#X msg 65 50 server(AUDIO);
+#X msg 210 49 server(GEM);
+#X text 26 8 Simple Arch View:;
+#X text 72 279 With the client-audioOSCTCP-demo01 pd patch I have used
+two abstractions to show/establish that OSC works in the pure-data
+environment and that the load-balance is 1/2 that of a non-osc patch
+implementation. This looks to be the case with LOCALHOST testing.;
+#X text 73 196 1) node.js - success with both UDP and TCP stream net(int
+data)-audio(Server). The node.js testing has been done with raw-plain
+node.js with no package dependecies as well as osc.js \, osc-emit.js
+and osc-web.js. osc.js and osc-web have shown some succes. Issue is
+now accessing and parsing the data sent. Both osc.js and osc-web (bridge.js)
+have allowed me bi-directional communication: js -> pd && pd -> js
+.;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;

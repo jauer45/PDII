@@ -1,0 +1,12 @@
+#N canvas 554 232 450 300 10;
+#X declare -lib mrpeach;
+#X obj 18 40 osc-web-test01;
+#X text 16 6 TESTING ports: 3333 \, 8081 (using node.js osc-web) \;
+default is 3333;
+#X text 118 40 NETSTAT shows : $ netstat -q | grep 8081 TCP 0.0.0.0:8081
+LAPTOP-AC0F96A3:0 LISTENING TCP [::]:8081 LAPTOP-AC0F96A3:0 LISTENING
+;
+#X text 115 250 RESULT : It works ! - I can send messages to node.js
+;
+#X text 112 166 OSC server disk PATH: ../NodeJS/osc-web/bridge.js;
+#X text 137 178 REQUIRES: socket.io (npm install -g socket.io);
