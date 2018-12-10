@@ -1,0 +1,22 @@
+#N canvas 554 232 514 300 10;
+#X declare -lib mrpeach;
+#X text 16 6 TESTING ports: 3333 \, 8081 (using node.js osc-web) \;
+default is 3333;
+#X text 115 250 RESULT : It works ! - I can send messages to node.js
+;
+#X obj 18 40 osc-web-test00;
+#X text 118 40 NETSTAT shows : $ netstat -q | grep 8081 TCP 0.0.0.0:8081
+LAPTOP-********:* LISTENING TCP [::]:8081 LAPTOP-********:* LISTENING
+;
+#X text 137 111 - REQUIRES: socket.io (npm install -g socket.io);
+#X text 138 122 - REQUIRES: node.js osc-web package (npm install osc-web)
+;
+#X text 138 133 - NOTE: The ./node_js/client-pdconn script should be
+placed in the ../your-node-js-root/osc-web/ directory and exec'd there.
+;
+#X text 118 87 ++ OSC node.js server path (node.js relative location):
+../your-node-js-root/osc-web/bridge.js;
+#X text 123 186 ++ OSC Processing (Going to assume you know it and
+have installed it) : Just put the Processing script in ./oscP5sendreceive/
+under the Processing exec PATH. Open up Processing then open the oscP5*.ps
+file and "Run"/"Play".;

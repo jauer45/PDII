@@ -1,0 +1,29 @@
+#N canvas 12 41 544 536 10;
+#X text 71 43 AVUnit (v0.3) : This is an OSC client-server "module"
+based pure-data patch system. It focuses mainly on the following 3
+forms of synthesis:;
+#X text 128 88 1 FFT/FM synthesis (Hanning \; osc~ modulating signal)
+;
+#X text 128 123 2 Granular synthesis (microtonal waveform sample manipulations)
+;
+#X text 128 158 3 Spectral / Partial Synthesis.;
+#X text 77 190 There is also the base fundamental Addative/Subtractive/Tabular
+synthesis support patches.;
+#X text 29 20 ABOUT:;
+#X text 77 225 The ./Test/*Test*.pd files are template guides to show
+a functional working system in relation to Server-Client testing. For
+a true system the Audo (serverA) \, GEM (serverB) and controller (clientN...client(N+1))
+would all exist on different "machines"/"instances"/"VMs". All instances
+would communicate through the same OSC(udp/tcp) protocol(s) on the
+same IP ports.;
+#X text 77 325 The ./Test/*Test*.pd files will have the main audio
+or/and visual patch module function in the file title. Some tests will
+be "self contained" but others will make a call reference to patch
+modules in the root directory. Which one is which is given in the patch
+documentation \, (TODO).;
+#X text 79 401 Disclaimer : This is mainly for personal use. I wanted
+an architecture that would free-up memory. The context is a Lenova
+"ideapad 320" with -- Windows OS 10 Home (vers 1803) \; Processor:
+Intel Pentium CPU N4200 @ 1.10Ghz \; Installed RAM: 4 GB \, (3.83 GB
+usable) \; SysType: 64-bitOS \, x64-based processor.;
+#X text 284 490 --joseph auer 10/12/2018;
