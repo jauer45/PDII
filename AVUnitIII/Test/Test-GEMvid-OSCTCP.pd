@@ -1,3 +1,5 @@
-#N canvas 589 106 450 300 10;
+#N canvas 139 213 797 300 10;
+#X declare -lib mrpeach;
 #X declare -lib mrpeach;
 #X obj 38 44 client-control-wrapperOSCTCP-Test01;
+#X obj 267 45 server-GEMvideo-wrapperOSCTCP-Test01;
