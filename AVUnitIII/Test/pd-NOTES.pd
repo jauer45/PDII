@@ -1,0 +1,56 @@
+#N canvas 883 205 442 445 10;
+#X declare -lib mrpeach;
+#X obj 258 69 t b a b;
+#X msg 258 95 ];
+#X msg 297 94 [;
+#X obj 187 54 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 94 97 pack s f f f f f f f f f f;
+#X msg 94 69 /Start;
+#X obj -20 5 import mrpeach;
+#X obj 187 25 inlet some_binopt_arg;
+#X obj 276 122 packOSCstream;
+#X text -18 378 NOTE: This is an abstraction of OSC tcp request FAILS
+for reference. It could be used as a "wrapper" where you "roll your
+own" messaging requests for OSC communication prototyping;
+#X obj 94 126 outlet PRINTOUT;
+#X obj 276 165 outlet OSCstrm;
+#X text 0 37 Err: 'Does not like "list"';
+#X obj 189 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 153 358 zl;
+#X msg 119 270 mode join;
+#X obj 227 270 t b b;
+#X obj 71 310 pack f f f f f f f f f f;
+#X msg 228 308 send /Start;
+#X obj 300 332 packOSCstream;
+#X obj 300 354 outlet zlOSCstrm;
+#X obj 226 250 inlet another_binopt_arg;
+#X text -22 186 2.) OK - In the end the zl object from the zexy library
+did the list (RAW) -> list (message friendly format) conversion that
+was required for OSCstream to SLIP pack and unpack. This will only
+work in pure-data \, (Need to test UDP next then run interop tests
+against Processing and node.js scripts - maybe SLIP issue ?).;
+#X text -24 27 1.) FAIL - usage for pack list;
+#X connect 0 0 1 0;
+#X connect 0 1 8 0;
+#X connect 0 2 2 0;
+#X connect 1 0 8 0;
+#X connect 2 0 8 0;
+#X connect 3 0 5 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 4 0 10 0;
+#X connect 5 0 4 0;
+#X connect 7 0 3 0;
+#X connect 8 0 11 0;
+#X connect 13 0 16 0;
+#X connect 13 0 15 0;
+#X connect 14 0 19 0;
+#X connect 15 0 14 0;
+#X connect 16 0 18 0;
+#X connect 16 1 17 0;
+#X connect 17 0 14 1;
+#X connect 18 0 14 0;
+#X connect 19 0 20 0;
+#X connect 21 0 13 0;
