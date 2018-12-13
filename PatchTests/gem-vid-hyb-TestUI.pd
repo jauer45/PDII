@@ -1,0 +1,2 @@
+#N canvas 495 241 450 300 10;
+#X obj -52 25 gem-vid-hyb-testVI;
