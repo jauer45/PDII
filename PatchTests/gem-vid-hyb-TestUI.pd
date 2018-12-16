@@ -1,3 +1,3 @@
-#N canvas 680 2 365 450 10;
-#X obj -33 215 gem-vid-hyb-testVI;
-#X obj -33 -20 gem-vid-hyb-testVIII;
+#N canvas 680 2 365 495 10;
+#X obj -33 233 gem-vid-hyb-testVI;
+#X obj -33 -20 gem-vid-hyb-testIX;
