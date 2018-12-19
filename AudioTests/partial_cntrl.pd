@@ -1,0 +1,44 @@
+#N canvas 0 0 450 300 10;
+#X floatatom 85 35 5 0 0 0 - - -;
+#X obj 85 96 mtof;
+#X obj 85 122 s frequency;
+#X floatatom 86 66 5 0 0 0 - - -;
+#X obj 161 82 * 100;
+#X obj 161 121 s duration;
+#X obj 43 67 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 99 187 s trigger;
+#X obj 13 159 metro;
+#X obj 13 36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 34 36 5 0 0 0 - - -;
+#X obj 13 187 f;
+#X obj 42 187 + 1;
+#X obj 70 186 % 2;
+#X msg 87 142 stop;
+#X obj 13 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 85 19 Freq;
+#X text 84 51 Drtn;
+#X text 10 19 Start tTrig;
+#X text 10 52 Stop;
+#X text 40 52 Status;
+#X obj 134 8 inlet pstart;
+#X obj 156 31 inlet pstop;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 12 0;
+#X connect 12 0 11 1;
+#X connect 12 0 13 0;
+#X connect 13 0 6 0;
+#X connect 14 0 8 0;
+#X connect 15 0 14 0;
+#X connect 21 0 9 0;
+#X connect 22 0 15 0;
+#X coords 0 -1 1 1 120 86 1 5 5;
