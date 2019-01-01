@@ -1,7 +1,10 @@
-#N canvas 139 213 797 300 10;
+#N canvas 549 11 797 300 10;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
-#X obj 38 44 client-control-wrapperOSCUDP-Test01;
-#X obj 267 45 server-GEMvideo-wrapperOSCUDP-Test01;
-#X text 267 25 GEM "Server" (127.0.0.1:3333);
-#X text 36 25 Client (:3333);
+#X declare -lib mrpeach;
+#X text 266 18 GEM "Server" (127.0.0.1:3333);
+#X text 35 18 Client (:3333);
+#X obj 266 36 server-GEMvideo-wrapperOSCUDP-Test01a;
+#X obj 37 35 client-control-wrapperOSCUDP-Test01a;
+#X obj 266 192 server-Audio-wrapperOSCUDP-Test01a;
+#X text 265 174 Audio (dac~) "Server" ( :8081);
