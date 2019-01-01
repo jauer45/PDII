@@ -1,0 +1,68 @@
+#N canvas 610 146 528 406 10;
+#X obj 185 78 metro;
+#X obj 105 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 105 83 5 0 0 0 - - -;
+#X obj 184 99 f;
+#X obj 213 99 + 1;
+#X obj 241 98 % 2;
+#X msg 185 58 stop;
+#X obj 267 96 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 267 78 PLAY;
+#X floatatom 103 169 5 0 0 0 - - -;
+#X obj 264 185 mtof;
+#X floatatom 104 209 5 0 0 0 - - -;
+#X obj 185 225 * 100;
+#X obj 186 143 metro;
+#X obj 185 164 f;
+#X obj 214 164 + 1;
+#X obj 242 163 % 137;
+#X msg 186 122 stop;
+#X obj 105 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 230 144 80;
+#X text 102 192 Duration;
+#X text 102 41 Trigger;
+#X text 103 106 Freq;
+#X obj 13 260 outlet~;
+#X obj 122 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 143 63 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 143 128 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 12 29 catch~ sumA;
+#X obj 12 47 chline;
+#X obj 261 242 s duration;
+#X obj 300 202 s frequency;
+#X obj 300 116 s trigger;
+#X obj 21 229 partial_matrix6;
+#X obj 66 9 partial_matrix3;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 4 0;
+#X connect 4 0 3 1;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 6 0 0 0;
+#X connect 7 0 31 0;
+#X connect 9 0 10 0;
+#X connect 10 0 30 0;
+#X connect 11 0 12 0;
+#X connect 12 0 29 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 14 1;
+#X connect 15 0 16 0;
+#X connect 16 0 9 0;
+#X connect 17 0 13 0;
+#X connect 18 0 13 0;
+#X connect 19 0 13 1;
+#X connect 24 0 19 0;
+#X connect 25 0 6 0;
+#X connect 26 0 17 0;
+#X connect 27 0 28 0;
+#X connect 28 0 23 0;
+#X coords 0 -1 1 1 160 250 1 5 2;
