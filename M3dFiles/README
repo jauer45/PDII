@@ -1,0 +1,13 @@
+2019, Joseph Auer
+
+[About]
+Mandelbulb 3d; pure-data
+
+[Note]
+If you have Mandelbulb 3d and you want some pure-data images generated from the patches off this PDII and the other PD repos then feel free to use. This is the current way I set unique maps for M3d.
+
+[Notes]
+1) Extract the Madelbulb 3d files from the MyM3dParamFile.zip file to a folder under the root installation of Mandelbulb 3d where you load .m3p files from.
+
+2) Extract the pure-data generated image files from the M3pd-maps.zip file to the root Mandelbulb ./M3Maps directory, (there should not be any file overwrite as the first set of map files is 1 -15; with the second set happening somewhere around 100. If a warning is thrown up - or you know this already is an issue you'll need to extract elsewhere and re-name the relevent files so no overwrite occurs).
+
